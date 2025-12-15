@@ -43,17 +43,17 @@ La struttura dei dati principale è definita nella tabella `Notes`, progettata p
 | **id** | Integer | PK, Autoincrement | Identificativo univoco dell'attività. |
 | **name** | Varchar(50) | Not Null | Titolo o breve descrizione dell'attività. |
 | **description** | Text | Nullable | Descrizione dettagliata dell'attività. |
-| **created_at** | Date/Timestamp | Not Null (Data odierna) | Data e ora di creazione dell'attività. |
-| **expiry_date** | Date | Nullable | Data entro cui l'attività deve essere completata. |
+| **createdAt** | Date/Timestamp | Not Null (Data odierna) | Data e ora di creazione dell'attività. |
+| **expiryDate** | Date | Nullable | Data entro cui l'attività deve essere completata. |
 | **deleted** | Boolean | Not Null (Default: False) | Flag per l'eliminazione logica (Soft Delete). |
 | **tag** | Varchar(10) | Nullable | Tags per organizzazione interna |
-| **user_id** | Integer | Not Null | Chiave Esterna per gestire multi utenza |
+| **userId** | Integer | Not Null | Chiave Esterna per gestire multi utenza |
 
 Tabella `Users` per completare la funzionalità per avere più utenti.
 
 | Colonna | Tipo di Dato | Vincoli | Descrizione |
 | :--- | :--- | :--- | :--- |
-| **Id** | Integer | PK, Autoincrement | Identificativo univoco dell'attività. |
+| **id** | Integer | PK, Autoincrement | Identificativo univoco dell'attività. |
 | **name** | Varchar(50) | Not Null | Titolo o breve
 | **email** | Varchar(50) | Not Null, Unique | Validazione e sanitizzazione
 | **password** | Varchar(50) | Not Null, Hashing,  | Rispettare criteri minimi di sicurezza
@@ -64,9 +64,9 @@ Al fine di accellerare la fase di sviluppo verranno stabilite regole di avvio e 
 
 **PORTE IN USO:**
 
-- *Backend* espone porte **5204 per connessioni HTTP** e **7224 per connessioni HTTPS**.
+- *Backend* espone porte **5183 per connessioni HTTP** e **7097 per connessioni HTTPS**.
 
-- *Frontend* espone **porta 2019**.
+- *Frontend* espone **porta 2000**.
 
 > [!CAUTION]
 > Prevenire errori CORS abilitando il reverse proxy sulla porta 2019 del frontend e abilitare tutti i metodi CRUD.
@@ -94,5 +94,11 @@ Controllare, in caso di errori:
    - punteggiatura corretta
 4. Abilitare il certificato di connessione sicura
 5. Verificare regole del firewall
+
+Stringa di connessione locale: 
+
+```bash
+Scaffold-DbContext "Server=.\SQLEXPRESS;Database=Todo;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext -Tables Users,Notes -DataAnnotations -Force
+```
 
 ---

@@ -50,6 +50,7 @@ Oltre a questi sono necessari i pacchetti:
 - [x] Microsoft.EntityFrameworkCore
 - [x] Microsoft.EntityFrameworkCore.SqlServer
 - [x] Microsoft.EntityFrameworkCore.Tools
+- [x] Bcrypt per hashing password
 
 > [!CAUTION]
 >
