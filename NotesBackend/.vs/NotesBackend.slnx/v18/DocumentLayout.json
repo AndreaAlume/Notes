@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07B0130F-6AFD-4BE3-B501-997E34964908}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07B0130F-6AFD-4BE3-B501-997E34964908}|NotesBackend.csproj|solutionrelative:controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T08:48:01.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "NoteController.cs",
               "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\NoteController.cs",
               "RelativeDocumentMoniker": "Controllers\\NoteController.cs",
