@@ -19,7 +19,7 @@ namespace NotesBackend.Controllers
 
         // GET: api/users
         [HttpGet]
-        public async Task<IEnumerable<User> Get()
+        public async Task<IEnumerable<User>> Get()
         {
             return await _context.Users.ToListAsync();
         }

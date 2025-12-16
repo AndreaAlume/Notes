@@ -14,6 +14,13 @@ In questo caso le sfide da gestire saranno i vincoli di sicurezza legati all'acc
 
 Successivamente alla registrazione l'utente potrà accedere alla propria area personale per la gestione delle note.
 
+## Autorizzazione
+
+Differenziare i ruoli fra:
+
+- **admin**: ha l'accesso a tutte le note di tutti gli utenti. Non ha possibilità di effettuare operazioni nè sugli utenti nè sulle note. Ma ha la possibilità di aggiungere altri utenti come admin.
+
+- **user**: ha accesso solo alle proprie note con possibilità di operazioni CRUD.
 
 ## Gestione delle note
 
@@ -43,7 +50,7 @@ La struttura dei dati principale è definita nella tabella `Notes`, progettata p
 | **id** | Integer | PK, Autoincrement | Identificativo univoco dell'attività. |
 | **name** | Varchar(50) | Not Null | Titolo o breve descrizione dell'attività. |
 | **description** | Text | Nullable | Descrizione dettagliata dell'attività. |
-| **createdAt** | Date/Timestamp | Not Null (Data odierna) | Data e ora di creazione dell'attività. |
+| **createdAt** | Date | Not Null (Data odierna) | Data e ora di creazione dell'attività. |
 | **expiryDate** | Date | Nullable | Data entro cui l'attività deve essere completata. |
 | **deleted** | Boolean | Not Null (Default: False) | Flag per l'eliminazione logica (Soft Delete). |
 | **tag** | Varchar(10) | Nullable | Tags per organizzazione interna |
@@ -57,6 +64,7 @@ Tabella `Users` per completare la funzionalità per avere più utenti.
 | **name** | Varchar(50) | Not Null | Titolo o breve
 | **email** | Varchar(50) | Not Null, Unique | Validazione e sanitizzazione
 | **password** | Varchar(50) | Not Null, Hashing,  | Rispettare criteri minimi di sicurezza
+| **role** | enum: admin = 1 / user = 0 | Not Null, default "User" | Differenti ruoli per differenti operazioni |
 
 ## Setting di sviluppo
 
