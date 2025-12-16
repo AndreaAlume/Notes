@@ -23,7 +23,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Note"
+                    "$ref": "#/components/schemas/NoteDto"
                   }
                 }
               },
@@ -31,7 +31,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Note"
+                    "$ref": "#/components/schemas/NoteDto"
                   }
                 }
               },
@@ -39,7 +39,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Note"
+                    "$ref": "#/components/schemas/NoteDto"
                   }
                 }
               }
@@ -437,6 +437,48 @@
                 "$ref": "#/components/schemas/User"
               }
             ]
+          }
+        }
+      },
+      "NoteDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "expiryDate": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date"
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "tag": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "userId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
           }
         }
       },

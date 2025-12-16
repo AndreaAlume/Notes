@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "NotesBackend.Controllers.NoteController",
-    "Method": "Get",
+    "Method": "GetAll",
     "RelativePath": "api/notes",
     "HttpMethod": "GET",
     "IsController": true,
@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[NotesBackend.Models.Note, NotesBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[NotesBackend.Models.Dtos.NoteDto, NotesBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -47,7 +47,7 @@
   },
   {
     "ContainingType": "NotesBackend.Controllers.NoteController",
-    "Method": "Get",
+    "Method": "GetById",
     "RelativePath": "api/notes/{id}",
     "HttpMethod": "GET",
     "IsController": true,

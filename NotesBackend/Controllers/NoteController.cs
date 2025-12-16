@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NotesBackend.Models;
+using NotesBackend.Models.Dtos;
+using NotesBackend.Services;
 using System.Threading.Tasks;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace NotesBackend.Controllers
 {
@@ -20,14 +21,19 @@ namespace NotesBackend.Controllers
 
         // GET: api/notes
         [HttpGet]
-        public async Task<IEnumerable<Note>> Get()
+        public async Task<ActionResult<IEnumerable<NoteDto>>> GetAll()
         {
-            return await _context.Notes.ToListAsync();
+            List<Note> note = await _context.Notes.ToListAsync();
+
+            List<NoteDto> noteDtos = NoteMapper.ConvertToDtoList(note);
+
+            return noteDtos;
         }
+
 
         // GET api/notes/id
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<Note>> Get(int id)
+        public async Task<ActionResult<Note>> GetById(int id)
         {
             var note = await _context.Notes.FindAsync(id);
             if (note == null) return NotFound();
@@ -40,7 +46,7 @@ namespace NotesBackend.Controllers
         {
             _context.Notes.Add(note);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(Get), new { id = note.Id }, note);
+            return CreatedAtAction(nameof(GetAll), new { id = note.Id }, note);
         }
 
 

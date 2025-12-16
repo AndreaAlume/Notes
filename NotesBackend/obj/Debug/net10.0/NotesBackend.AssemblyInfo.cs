@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotesBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8509fa8f258f6f5600ab7d2342cb9a128cd74715")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9a74c2ea188cc4be439489ef772c0deda2a1573")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotesBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotesBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
