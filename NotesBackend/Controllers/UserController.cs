@@ -25,7 +25,7 @@ namespace NotesBackend.Controllers
         }
 
         // GET api/users/id
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<User>> Get(int id)
         {
             var user = await _context.Users.FindAsync(id);
@@ -43,17 +43,23 @@ namespace NotesBackend.Controllers
         }
 
         // PUT api/users/id
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<IActionResult> Put(int id, [FromBody] User user)
         {
-            if (id != user.Id) return BadRequest();
-            _context.Entry(user).State = EntityState.Modified;
+            var value = await _context.Users.FindAsync(id);
+            if (value == null) return NotFound();
+
+            user.Name = user.Name;
+            user.Email = user.Email;
+            user.Password = user.Password;
+            user.Role = user.Role;
+
             await _context.SaveChangesAsync();
             return NoContent();
         }
 
         // DELETE api/users/id
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async  Task<IActionResult> Delete(int id)
         {
             var user = await _context.Users.FindAsync(id);

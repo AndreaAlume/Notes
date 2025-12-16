@@ -25,6 +25,9 @@ public partial class User
     [StringLength(255)]
     public string Password { get; set; } = null!;
 
+    [Column("role")]
+    public bool Role { get; set; }
+
     [InverseProperty("User")]
     public virtual ICollection<Note> Notes { get; set; } = new List<Note>();
 }

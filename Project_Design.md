@@ -64,7 +64,7 @@ Tabella `Users` per completare la funzionalità per avere più utenti.
 | **name** | Varchar(50) | Not Null | Titolo o breve
 | **email** | Varchar(50) | Not Null, Unique | Validazione e sanitizzazione
 | **password** | Varchar(50) | Not Null, Hashing,  | Rispettare criteri minimi di sicurezza
-| **role** | enum: admin = 1 / user = 0 | Not Null, default "User" | Differenti ruoli per differenti operazioni |
+| **role** | enum: admin = true / user = false | Not Null, default "User" | Differenti ruoli per differenti operazioni |
 
 ## Setting di sviluppo
 
@@ -103,7 +103,7 @@ Controllare, in caso di errori:
 4. Abilitare il certificato di connessione sicura
 5. Verificare regole del firewall
 
-Stringa di connessione locale: 
+Stringa per effettuare scaffolding locale sovrascrivendo il models per implementazioni future: 
 
 ```bash
 Scaffold-DbContext "Server=.\SQLEXPRESS;Database=Todo;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext -Tables Users,Notes -DataAnnotations -Force

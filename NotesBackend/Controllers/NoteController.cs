@@ -26,7 +26,7 @@ namespace NotesBackend.Controllers
         }
 
         // GET api/notes/id
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<Note>> Get(int id)
         {
             var note = await _context.Notes.FindAsync(id);
@@ -44,7 +44,7 @@ namespace NotesBackend.Controllers
         }
 
         // PUT api/<ValuesController>/5
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<IActionResult> Put(int id, [FromBody] Note note)
         {
             if (id != note.Id) return BadRequest();
@@ -57,7 +57,7 @@ namespace NotesBackend.Controllers
 
 
         // DELETE api/<ValuesController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
             var note = await _context.Notes.FindAsync(id);

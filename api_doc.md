@@ -32,10 +32,10 @@ Quensto endpoint è legato alla tabella delle note di un singolo utente.
 
 ```json
 {
-    "id": 1,
-    "name": "Andre",
-    "email": "example@gmail.com",
-    "password": "hash_password",
-    "role": "admin"
+  "id": 1,
+  "name": "Mario Rossi",
+  "email": "mario.rossi@example.com",
+  "password": "hashed_password_here",
+  "role": true
 }
 ```
