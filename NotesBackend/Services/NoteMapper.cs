@@ -13,7 +13,6 @@ namespace NotesBackend.Services
             {
                 Name = note.Name,
                 Description = note.Description,
-                CreatedAt = note.CreatedAt,
                 ExpiryDate = note.ExpiryDate,
                 Deleted = note.Deleted,
                 Tag = note.Tag,

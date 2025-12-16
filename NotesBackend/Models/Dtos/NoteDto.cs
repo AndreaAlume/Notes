@@ -9,8 +9,6 @@ namespace NotesBackend.Models.Dtos
 
         public string? Description { get; set; }
 
-        public DateOnly CreatedAt { get; set; }
-
         public DateOnly? ExpiryDate { get; set; }
 
         public bool Deleted { get; set; }

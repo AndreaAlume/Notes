@@ -429,14 +429,7 @@
             "format": "int32"
           },
           "user": {
-            "oneOf": [
-              {
-                "type": "null"
-              },
-              {
-                "$ref": "#/components/schemas/User"
-              }
-            ]
+            "$ref": "#/components/schemas/User"
           }
         }
       },
@@ -451,10 +444,6 @@
               "null",
               "string"
             ]
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date"
           },
           "expiryDate": {
             "type": [
