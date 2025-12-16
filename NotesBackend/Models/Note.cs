@@ -37,5 +37,5 @@ public partial class Note
 
     [ForeignKey("UserId")]
     [InverseProperty("Notes")]
-    public virtual User User { get; set; } = null!;
+    public virtual User? User { get; set; }
 }
