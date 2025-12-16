@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NotesBackend.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace NotesBackend.Controllers
 {
     [Route("api/users")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _context;

@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "NotesBackend.Security.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "NotesBackend.Models.Dtos.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NotesBackend.Controllers.NoteController",
     "Method": "GetAll",
     "RelativePath": "api/notes",

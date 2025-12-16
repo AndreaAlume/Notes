@@ -1,7 +1,7 @@
 ﻿using NotesBackend.Models;
 using NotesBackend.Models.Dtos;
 
-namespace NotesBackend.Services
+namespace NotesBackend.Services.Mappers
 {
     public class NoteMapper
     {

@@ -10,6 +10,38 @@
     }
   ],
   "paths": {
+    "/api/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/notes": {
       "get": {
         "tags": [
@@ -376,6 +408,17 @@
   },
   "components": {
     "schemas": {
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
       "Note": {
         "type": "object",
         "properties": {
@@ -511,6 +554,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Auth"
+    },
     {
       "name": "Note"
     },

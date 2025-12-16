@@ -214,3 +214,4 @@ C:\Users\finso\Desktop\Notes\NotesBackend\obj\Debug\net10.0\refint\NotesBackend.
 C:\Users\finso\Desktop\Notes\NotesBackend\obj\Debug\net10.0\NotesBackend.pdb
 C:\Users\finso\Desktop\Notes\NotesBackend\obj\Debug\net10.0\NotesBackend.genruntimeconfig.cache
 C:\Users\finso\Desktop\Notes\NotesBackend\obj\Debug\net10.0\ref\NotesBackend.dll
+C:\Users\finso\Desktop\Notes\NotesBackend\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

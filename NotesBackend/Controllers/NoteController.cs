@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NotesBackend.Models;
 using NotesBackend.Models.Dtos;
-using NotesBackend.Services;
+using NotesBackend.Services.Mappers;
 using System.Threading.Tasks;
 
 
@@ -10,6 +11,7 @@ namespace NotesBackend.Controllers
 {
     [Route("api/notes")]
     [ApiController]
+    [Authorize]
     public class NoteController : ControllerBase
     {
         private readonly AppDbContext _context;
