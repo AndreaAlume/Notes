@@ -6,6 +6,7 @@ using NotesBackend.Models;
 
 namespace NotesBackend.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("api/users")]
     public class UserController : ControllerBase

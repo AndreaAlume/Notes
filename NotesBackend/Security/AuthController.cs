@@ -23,7 +23,7 @@ namespace NotesBackend.Security
             {
                 return Unauthorized("Credenziali non valide");
             }
-            var token = JwtTokenService.GenerateToken(user.Email);
+            var token = JwtTokenService.GenerateToken(cred.Email, cred.Role);
             return Ok(new { token = token });
         }
 

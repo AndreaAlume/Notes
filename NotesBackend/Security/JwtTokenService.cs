@@ -1,18 +1,21 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using NotesBackend.Models;
+using System.Security.Claims;
 using System.Text;
 
 namespace NotesBackend.Security
 {
     public class JwtTokenService
     {
-        public static string GenerateToken(string email)
+        public static string GenerateToken(string email, string role)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("rIAzo6rJIfHJEM5gHmIki1xgi9LQB37L"));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-                new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Email, email)
+                new Claim(ClaimTypes.Email, email), 
+                new Claim(ClaimTypes.Role, role)
             };
 
             var token = new System.IdentityModel.Tokens.Jwt.JwtSecurityToken(

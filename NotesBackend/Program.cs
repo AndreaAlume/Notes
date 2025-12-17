@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
 using NotesBackend.Models;
+using System.Security.Claims;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,10 +25,12 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = "MyNotes",
         ValidAudience = "MyNotesWeb",
+        RoleClaimType = ClaimTypes.Role,
         IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("rIAzo6rJIfHJEM5gHmIki1xgi9LQB37L"))
     };
 });
 
+builder.Services.AddAuthorization();
 
 builder.Services.AddOpenApi();
 
