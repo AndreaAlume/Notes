@@ -232,6 +232,38 @@
         }
       }
     },
+    "/api/registration": {
+      "post": {
+        "tags": [
+          "Registration"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/users": {
       "get": {
         "tags": [
@@ -514,6 +546,44 @@
           }
         }
       },
+      "RegisterDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "Role": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "name": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/User"
+            }
+          }
+        }
+      },
       "User": {
         "type": "object",
         "properties": {
@@ -541,13 +611,18 @@
             "type": "string"
           },
           "role": {
-            "type": "boolean"
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
           },
           "notes": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Note"
             }
+          },
+          "roleNavigation": {
+            "$ref": "#/components/schemas/Role"
           }
         }
       }
@@ -559,6 +634,9 @@
     },
     {
       "name": "Note"
+    },
+    {
+      "name": "Registration"
     },
     {
       "name": "User"

@@ -125,6 +125,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "NotesBackend.Controllers.RegistrationController",
+    "Method": "Register",
+    "RelativePath": "api/registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "NotesBackend.Models.Dtos.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NotesBackend.Controllers.UserController",
     "Method": "Get",
     "RelativePath": "api/users",

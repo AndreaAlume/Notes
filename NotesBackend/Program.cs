@@ -1,15 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Identity;
 using NotesBackend.Models;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add services to the container.
 
 builder.Services.AddControllers();
+
 
 builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
 {
@@ -25,11 +28,12 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
     };
 });
 
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

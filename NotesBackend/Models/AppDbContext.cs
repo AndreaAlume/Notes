@@ -17,10 +17,11 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Note> Notes { get; set; }
 
+    public virtual DbSet<Role> Roles { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=Todo;Trusted_Connection=True;Encrypt=False;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,9 +35,20 @@ public partial class AppDbContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.Notes).HasConstraintName("FK_Notes_Users");
         });
 
+        modelBuilder.Entity<Role>(entity =>
+        {
+            entity.HasKey(e => e.Name).HasName("PK__Roles__72E12F1AE278B3B3");
+
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+        });
+
         modelBuilder.Entity<User>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Users__3213E83FC18CB0F1");
+
+            entity.HasOne(d => d.RoleNavigation).WithMany(p => p.Users)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Users_Roles");
         });
 
         OnModelCreatingPartial(modelBuilder);

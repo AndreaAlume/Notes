@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace NotesBackend.Controllers
 {
-    [Route("api/notes")]
     [ApiController]
-    [Authorize]
+    [Route("api/notes")]
     public class NoteController : ControllerBase
     {
         private readonly AppDbContext _context;

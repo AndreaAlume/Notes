@@ -6,9 +6,8 @@ using NotesBackend.Models;
 
 namespace NotesBackend.Controllers
 {
-    [Route("api/users")]
     [ApiController]
-    [Authorize]
+    [Route("api/users")]
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _context;

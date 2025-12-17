@@ -1,23 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NotesBackend.Models;
 using NotesBackend.Models.Dtos;
 
 namespace NotesBackend.Security
 {
-    [Route("api/login")]
+    [Route("api")]
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly AppDbContext _context;
 
-        [HttpPost]
+        public AuthController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpPost("login")]
         public IActionResult Login([FromBody] LoginDto user)
         {
-            if (user.Email == "andre" && user.Password == "andre")
+            var cred = _context.Users.FirstOrDefault(u => u.Email == user.Email);
+            if (cred == null || cred.Password != user.Password) 
             {
-                var token = JwtTokenService.GenerateToken(user.Email);
-                return Ok(new { token = token });
+                return Unauthorized("Credenziali non valide");
             }
-            
-            return Unauthorized("Credenziali non valide");
+            var token = JwtTokenService.GenerateToken(user.Email);
+            return Ok(new { token = token });
         }
+
     }
 }

@@ -106,7 +106,7 @@ Controllare, in caso di errori:
 Stringa per effettuare scaffolding locale sovrascrivendo il models per implementazioni future: 
 
 ```bash
-Scaffold-DbContext "Server=.\SQLEXPRESS;Database=Todo;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext -Tables Users,Notes -DataAnnotations -Force
+Scaffold-DbContext "Server=.\SQLEXPRESS;Database=Todo;Trusted_Connection=True;Encrypt=False;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext -Tables Users,Notes,Roles -DataAnnotations -Force
 ```
 
 ---
