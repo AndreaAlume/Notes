@@ -16,7 +16,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NotesBackend.Controllers.NoteController",
+    "ContainingType": "NotesBackend.Controllers.Admin.NoteController",
     "Method": "GetAll",
     "RelativePath": "api/notes",
     "HttpMethod": "GET",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "ContainingType": "NotesBackend.Controllers.NoteController",
+    "ContainingType": "NotesBackend.Controllers.Admin.NoteController",
     "Method": "Post",
     "RelativePath": "api/notes",
     "HttpMethod": "POST",
@@ -62,7 +62,7 @@
     ]
   },
   {
-    "ContainingType": "NotesBackend.Controllers.NoteController",
+    "ContainingType": "NotesBackend.Controllers.Admin.NoteController",
     "Method": "GetById",
     "RelativePath": "api/notes/{id}",
     "HttpMethod": "GET",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "ContainingType": "NotesBackend.Controllers.NoteController",
+    "ContainingType": "NotesBackend.Controllers.Admin.NoteController",
     "Method": "Put",
     "RelativePath": "api/notes/{id}",
     "HttpMethod": "PUT",
@@ -109,7 +109,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NotesBackend.Controllers.NoteController",
+    "ContainingType": "NotesBackend.Controllers.Admin.NoteController",
     "Method": "Delete",
     "RelativePath": "api/notes/{id}",
     "HttpMethod": "DELETE",

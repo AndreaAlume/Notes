@@ -7,7 +7,7 @@ using NotesBackend.Services.Mappers;
 using System.Threading.Tasks;
 
 
-namespace NotesBackend.Controllers
+namespace NotesBackend.Controllers.Admin
 {
     [ApiController]
     [Route("api/notes")]

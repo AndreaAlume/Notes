@@ -1,0 +1,10 @@
+{
+    "apiUrl": "http://localhost:5183/api/",
+    "apiUrlSsl": "https://localhost:7265/api/",
+    "apiTags": {
+        "users": "users/",
+        "notes": "notes/",
+        "registration": "registration/",
+        "login": "login/"
+    }
+}

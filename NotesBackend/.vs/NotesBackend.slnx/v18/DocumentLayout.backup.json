@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\security\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:security\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\security\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:security\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\services\\mappers\\registermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:services\\mappers\\registermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\user\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\user\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,97 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T23:10:46.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwCAAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T23:09:22.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "JwtTokenService.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Security\\JwtTokenService.cs",
-              "RelativeDocumentMoniker": "Security\\JwtTokenService.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Security\\JwtTokenService.cs",
-              "RelativeToolTip": "Security\\JwtTokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T23:04:59.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Security\\AuthController.cs",
-              "RelativeDocumentMoniker": "Security\\AuthController.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Security\\AuthController.cs",
-              "RelativeToolTip": "Security\\AuthController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T23:00:05.705Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegisterMapper.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Services\\Mappers\\RegisterMapper.cs",
-              "RelativeDocumentMoniker": "Services\\Mappers\\RegisterMapper.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Services\\Mappers\\RegisterMapper.cs",
-              "RelativeToolTip": "Services\\Mappers\\RegisterMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T22:55:42.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegistrationController.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\RegistrationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RegistrationController.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\RegistrationController.cs",
-              "RelativeToolTip": "Controllers\\RegistrationController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAkwBwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T22:55:31.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Dtos\\RegisterDto.cs",
               "RelativeDocumentMoniker": "Models\\Dtos\\RegisterDto.cs",
               "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Dtos\\RegisterDto.cs",
               "RelativeToolTip": "Models\\Dtos\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T22:54:49.504Z",
+              "WhenOpened": "2025-12-18T09:25:13.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Security\\AuthController.cs",
+              "RelativeDocumentMoniker": "Security\\AuthController.cs",
+              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Security\\AuthController.cs*",
+              "RelativeToolTip": "Security\\AuthController.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T09:27:59.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\User\\RegistrationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\User\\RegistrationController.cs",
+              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\User\\RegistrationController.cs",
+              "RelativeToolTip": "Controllers\\User\\RegistrationController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T09:27:58.047Z",
               "EditorCaption": ""
             }
           ]

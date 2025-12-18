@@ -18,8 +18,12 @@ namespace NotesBackend.Security
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginDto user)
         {
+            var passwordHash = BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password, 8);
+            var passwordVerify = BCrypt.Net.BCrypt.EnhancedVerify("Ciao", passwordHash);
+            
             var cred = _context.Users.FirstOrDefault(u => u.Email == user.Email);
-            if (cred == null || cred.Password != user.Password) 
+            
+            if (cred == null || passwordVerify != false) 
             {
                 return Unauthorized("Credenziali non valide");
             }
