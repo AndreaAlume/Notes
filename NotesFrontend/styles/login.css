@@ -87,6 +87,7 @@ body {
  background-color: rgb(10,10,10);
  font-size: small;
  width: 250px;
+ color: white;
 }
 
 .email-input:focus {
@@ -101,6 +102,7 @@ body {
  background-color: rgb(10,10,10);
  font-size: small;
  width: 250px;
+ color: white;
 }
 
 .password-input:focus {
