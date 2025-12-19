@@ -8,7 +8,7 @@ using NotesBackend.Services.Mappers;
 
 namespace NotesBackend.Controllers
 {
-    [Authorize(Roles = "Admin, User")]
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("api/users")]
     public class UserController : ControllerBase

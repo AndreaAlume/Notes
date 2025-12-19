@@ -1,1018 +1,199 @@
 <!DOCTYPE html>
-<html class="desktop mbr-site-loaded" style=""><head>
-  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="https://r.mobirisesite.com/2119036/assets/images/logo.png?rnd=1766015236477" type="image/x-icon">
-  <meta name="description" content="Crea e gestisci le tue note con facilità. Piattaforma intuitiva per organizzare task, impostare scadenze e monitorare progressi. Registrazione e login sicuri.">
-  <title>Note Taking App: Gestisci Task, Scadenze e Organizza le Tue Note</title>
-  <link rel="stylesheet" href="https://r.mobirisesite.com/2119036/assets/web/assets/mobirise-icons2/mobirise2.css?rnd=1766015236473">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/2119036/assets/bootstrap/css/bootstrap.min.css?rnd=1766015236473">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/2119036/assets/dropdown/css/style.css?rnd=1766015236473">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/2119036/assets/socicon/css/styles.css?rnd=1766015236473">
-  <link rel="stylesheet" href="https://r.mobirisesite.com/2119036/assets/theme/css/style.css?rnd=1766015236473">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&amp;display=swap&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap&display=swap"></noscript>
-  <link rel="stylesheet" href="https://r.mobirisesite.com/2119036/assets/css/mbr-additional.css?rnd=1766015236473" type="text/css">
-  
-  
-  
-  
-
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presentazione</title>
 
 <style>
-.navbar-fixed-top {
-  top: auto;
+/* ---------- BASE (STESSI COLORI) ---------- */
+body {
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
-#mobirisePromo.container-banner {
-  height: 11rem;
-  opacity: 1;
-  -webkit-animation: 11s linear animationHeight;
-  -moz-animation: 11s linear animationHeight;
-    -o-animation: 11s linear animationHeight;
-       animation: 11s linear animationHeight;
-       transition: all  0.5s;
-}
-#mobirisePromo.container-banner.container-banner-closing {
-  pointer-events: none;
-  height: 0;
-  opacity: 0;
-  -webkit-animation: 0.5s linear animationClosing;
-  -moz-animation:  0.5s linear animationClosing;
-    -o-animation:  0.5s linear animationClosing;
-       animation:  0.5s linear animationClosing;
-}
-#mobirisePromo .banner {
-  min-height: 11rem;
-  position:fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 10px;
-  opacity:1;
-  -webkit-animation: 11s linear animationBanner;
-  -moz-animation: 11s linear animationBanner;
-    -o-animation: 11s linear animationBanner;
-       animation: 11s linear animationBanner;
-  z-index: 1031;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#mobirisePromo .banner p {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  animation: none;
-  visibility: visible;
-}
-#mobirisePromo .buy-license {
-  text-decoration: underline;
-}
-#mobirisePromo .banner .btn {
-  margin: 0.3rem 0.5rem;
-  animation: none;
-  visibility: visible;
-}
-.navbar.opened {
-    z-index: 1032;
-}
-#mobirisePromo .mbr-section-abuse-report {
-  margin-top: 0.8rem;
-  font-size: 80%;
-}
-#mobirisePromo .mbr-section-abuse-report a {
-  color: #aaa;
-}
-@-webkit-keyframes animationBanner { 0% { opacity: 0; top: -11rem; } 91% { opacity: 0; top: -11rem; } 100% { opacity: 1; top: 0; } }
-@-moz-keyframes animationBanner { 0% { opacity: 0; top: -11rem; } 91% { opacity: 0; top: -11rem; } 100% { opacity: 1; top: 0; } }
-@-o-keyframes animationBanner { 0% { opacity: 0; top: -11rem; } 91% { opacity: 0; top: -11rem; } 100% { opacity: 1; top: 0; } }
-   @keyframes animationBanner { 0% { opacity: 0; top: -11rem; } 91% { opacity: 0; top: -11rem; } 100% { opacity: 1; top: 0; } }
-@-webkit-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 11rem; } }
-@-moz-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 11rem; } }
-@-o-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 11rem; } }
-   @keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 11rem; } }
 
-@-webkit-keyframes animationClosing { 0% { height: 11rem; opacity: 1; } 30% { height: 11rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-@-moz-keyframes animationClosing { 0% { height: 11rem; opacity: 1; } 30% { height: 11rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-@-o-keyframes animationClosing { 0% { height: 11rem; opacity: 1; } 30% { height: 11rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-@keyframes animationClosing { 0% { height: 11rem; opacity: 1; } 30% { height: 11rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+/* ---------- HEADER ---------- */
+header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 20px auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-@media(max-width: 575px) {
-  #mobirisePromo.container-banner {
-    height: 14rem;
-  }
-  #mobirisePromo .banner {
-    min-height: 14rem;
-  }
-  @-webkit-keyframes animationBanner { 0% { opacity: 0; top: -14rem; } 91% { opacity: 0; top: -14rem; } 100% { opacity: 1; top: 0; } }
-  @-moz-keyframes animationBanner { 0% { opacity: 0; top: -14rem; } 91% { opacity: 0; top: -14rem; } 100% { opacity: 1; top: 0; } }
-  @-o-keyframes animationBanner { 0% { opacity: 0; top: -14rem; } 91% { opacity: 0; top: -14rem; } 100% { opacity: 1; top: 0; } }
-    @keyframes animationBanner { 0% { opacity: 0; top: -14rem; } 91% { opacity: 0; top: -14rem; } 100% { opacity: 1; top: 0; } }
-  @-webkit-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 14rem; } }
-  @-moz-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 14rem; } }
-  @-o-keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 14rem; } }
-    @keyframes animationHeight { 0% { height: 0; } 91% { height: 0; } 100% { height: 14rem; } }
+header h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
 
-  @-webkit-keyframes animationClosing { 0% { height: 14rem; opacity: 1; } 30% { height: 14rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-  @-moz-keyframes animationClosing { 0% { height: 14rem; opacity: 1; } 30% { height: 14rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-  @-o-keyframes animationClosing { 0% { height: 14rem; opacity: 1; } 30% { height: 14rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
-  @keyframes animationClosing { 0% { height: 14rem; opacity: 1; } 30% { height: 14rem; opacity: 0.5;} 100% { height: 0; opacity: 0;} }
+nav a {
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #ff00ff;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #b7b7b7;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    font-size: 15px;
+}
+
+.cta-btn {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 12px 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #2c2c2c;
+    transform: translateY(-2px);
+}
+
+/* ---------- CARDS (STILE LOGIN) ---------- */
+.section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: #121212;
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #b7b7b7;
+    font-size: 14px;
+}
+
+/* ---------- CTA FINALE ---------- */
+.final-cta {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.final-cta h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.final-cta .cta-btn {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+}
+
+.final-cta .cta-btn:hover {
+    background-color: #2c2c2c;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    color: #b7b7b7;
+    font-size: 13px;
+    margin-top: auto;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 600px){
+    nav a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
 }
 </style>
-<script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/10ecb549/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script async="" src="https://www.youtube.com/iframe_api"></script></head>
+</head>
+
 <body>
-  
-  <section data-bs-version="5.1" class="menu menu01 capturem5 cid-v5GoSd34jn" once="menu" id="menu-1-v5GoSd34jn">
-    
 
-    <nav class="navbar navbar-dropdown navbar-expand-lg">
-        <div class="content-wrap container">
-
-            <div class="navbar-brand">
-                
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-5" href="#">TaskMaster</a></span>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                    <li class="nav-item"><a class="nav-link link text-black display-7" href="#">Inizia</a></li>
-                    <li class="nav-item"><a class="nav-link link text-black display-7" href="#">Accedi</a></li>
-                    <li class="nav-item"><a class="nav-link link text-black display-7" href="#">Registrati</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link link text-black display-7" href="#">Note</a>
-                    </li>
-                </ul>
-                
-                <div class="navbar-buttons mbr-section-btn">
-                    <a class="btn btn-black-outline display-4" href="#">
-                        <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
-                        Nuova Nota
-                    </a>
-                </div>
-            </div>
-        </div>
+<header>
+    <h1>Presentazione</h1>
+    <nav>
+        <a href="#info">Info</a>
+        <a href="#caratteristiche">Caratteristiche</a>
+        <a href="#contatti">Contatti</a>
     </nav>
+</header>
+
+<section class="hero">
+    <h2>Benvenuto nella Presentazione</h2>
+    <p>Una pagina minimal e moderna, costruita con gli stessi colori e lo stesso stile del tuo login.</p>
+    <button class="cta-btn">Inizia</button>
 </section>
 
-<section data-bs-version="5.1" class="header01 framem5 cid-v5GoSdo0Xx" id="hero-1-v5GoSdo0Xx">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row">
-                        <div class="col-12 card">
-                            <div class="title-wrapper">
-                                <h2 class="mbr-section-title mbr-fonts-style display-1">
-                                    <strong>Le Tue Note, La Tua Mente.</strong>
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 card">
-                            <div class="text-wrapper">
-                                <p class="mbr-text mbr-fonts-style display-5">Organizza il caos mentale. Dimentica i post-it volanti e le idee perse nel vuoto cosmico. Qui, ogni pensiero trova casa.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 card">
-                            <div class="card-wrap">
-                                <div class="mbr-section-btn">
-                                    <a class="btn btn-black-outline display-4" href="#">
-                                        <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
-                                        Inizia Ora
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="info" class="section">
+    <div class="card">
+        <h3>Informazioni</h3>
+        <p>Questa pagina mantiene esattamente la stessa palette scura, le stesse card e lo stesso stile del layout originale.</p>
     </div>
 </section>
 
-<section data-bs-version="5.1" class="video02 framem5 cid-v5GoSdy1qc mbr-fullscreen" data-bg-video="https://www.youtube.com/embed/6V2mG40FnpU?autoplay=1&amp;loop=1&amp;playlist=6V2mG40FnpU&amp;t=20&amp;mute=1&amp;playsinline=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;allowfullscreen=true&amp;mode=transparent" id="video-2-v5GoSdy1qc"><div class="mbr-background-video-preview" style="display: block; background-size: cover; background-position: center center; background-image: url(&quot;https://img.youtube.com/vi/6V2mG40FnpU/maxresdefault.jpg&quot;);"></div><div style="overflow: hidden; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;"><div style="background: rgb(0, 0, 0); inset: 0px;"><div class="mbr-video-foreground" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; overflow: hidden;"><iframe class="mbr-background-video" id="ytplayer-92da0d" style="margin-top: 0px; max-width: initial; transition-property: opacity; transition-duration: 1000ms; pointer-events: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; transform: scale(1.2);" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Writing Pen Notebook   Stock Video Footage" width="1366" height="769" src="https://www.youtube.com/embed/6V2mG40FnpU?autoplay=1&amp;mute=0&amp;controls=0&amp;enablejsapi=1&amp;allowfullscreen=true&amp;iv_load_policy=3&amp;modestbranding=1&amp;origin=https%3A%2F%2F2119036.mobirisesite.com&amp;rel=0&amp;mode=transparent&amp;showinfo=0&amp;html5=1&amp;version=3&amp;playerapiid=iframe_YTP_1624972482514&amp;widgetid=1&amp;forigin=https%3A%2F%2F2119036.mobirisesite.com%2F&amp;aoriginsup=1&amp;gporigin=https%3A%2F%2Fa.mobirise.com%2F&amp;vf=1"></iframe></div></div></div>
-    
-
-    <div class="mbr-fallback-image disabled"></div>
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="image-wrap"></div>
-                </div>
-            </div>
-        </div>
+<section id="caratteristiche" class="section">
+    <div class="card">
+        <h3>Caratteristiche</h3>
+        <p>Design pulito, leggibile, moderno e coerente con l’interfaccia che hai già creato.</p>
     </div>
 </section>
 
-<section data-bs-version="5.1" class="features01 framem5 cid-v5GoSdzkCp" id="metrics-1-v5GoSdzkCp">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap">
-                        <div class="item features-without-image">
-                            <div class="item-wrapper">
-                                <h4 class="item-title mbr-fonts-style display-7">Note Create</h4>
-                                <p class="item-number mbr-fonts-style display-1">1500</p>
-                            </div>
-                        </div>
-                        <div class="item features-without-image">
-                            <div class="item-wrapper">
-                                <h4 class="item-title mbr-fonts-style display-7">Task Completati</h4>
-                                <p class="item-number mbr-fonts-style display-1">98</p>
-                            </div>
-                        </div>
-                        <div class="item features-without-image">
-                            <div class="item-wrapper">
-                                <h4 class="item-title mbr-fonts-style display-7">Ore Risparmiate</h4>
-                                <p class="item-number mbr-fonts-style display-1">250</p>
-                            </div>
-                        </div>
-                        <div class="item features-without-image">
-                            <div class="item-wrapper">
-                                <h4 class="item-title mbr-fonts-style display-7">Utenti Felici</h4>
-                                <p class="item-number mbr-fonts-style display-1">500</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="final-cta">
+    <h2>Vuoi continuare</h2>
+    <button class="cta-btn">Contattaci</button>
 </section>
 
-<section data-bs-version="5.1" class="article01 framem5 cid-v5GoSdAwrY" id="generic-text-1-v5GoSdAwrY">
-    
+<footer id="contatti">
+    &copy; 2025 Presentazione. Tutti i diritti riservati.
+</footer>
 
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row title-wrap">
-                        <div class="col-12 col-lg-6 card">
-                            <div class="title-wrapper">
-                                <div class="label-wrapper">
-                                    <div class="label-wrap">
-                                        <div class="decor-wrapper">
-                                            <div class="decor decor_1"></div>
-                                            <div class="decor decor_2"></div>
-                                            <div class="decor decor_3"></div>
-                                            <div class="decor decor_4"></div>
-                                            <div class="decor decor_5"></div>
-                                        </div>
-                                        <p class="mbr-label mbr-fonts-style display-7">
-                                            (Benvenuto)
-                                        </p>
-                                    </div>
-                                </div>
-                                <h2 class="mbr-section-title mbr-fonts-style display-2">Il Tuo Spazio Creativo</h2>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 card">
-                            <div class="desc-wrapper">
-                                <p class="mbr-desc mbr-fonts-style display-5">Un rifugio per le tue idee.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-wrap row">
-                        <div class="col-12 col-lg-9 card">
-                            <div class="text-wrapper">
-                                <p class="mbr-text mbr-fonts-style display-7">Stanco di perdere appunti preziosi? La nostra piattaforma è il tuo nuovo migliore amico per catturare ogni scintilla di genio. Dalla lista della spesa all'epopea del tuo prossimo romanzo, tutto trova posto qui. E non preoccuparti, non giudichiamo le tue idee stravaganti.</p>
-                                
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 card">
-                            <div class="image-wrapper">
-                                <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1611079830811-865ff4428d17.jpeg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="features06 framem5 cid-v5GoSdBrDm" id="features-3-v5GoSdBrDm">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row title-wrap">
-                        <div class="col-12 col-lg-6 card">
-                            <div class="title-wrapper">
-                                <div class="label-wrapper">
-                                    <div class="label-wrap">
-                                        <div class="decor-wrapper">
-                                            <div class="decor decor_1"></div>
-                                            <div class="decor decor_2"></div>
-                                            <div class="decor decor_3"></div>
-                                            <div class="decor decor_4"></div>
-                                            <div class="decor decor_5"></div>
-                                        </div>
-                                        <p class="mbr-label mbr-fonts-style display-7">
-                                            (Funzionalità)
-                                        </p>
-                                    </div>
-                                </div>
-                                <h2 class="mbr-section-title mbr-fonts-style display-2">Potenza a Portata di Mano</h2>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 card">
-                            <div class="desc-wrapper">
-                                <p class="mbr-desc mbr-fonts-style display-5">Gestisci tutto con facilità.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-wrap row">
-                        <div class="col-12 item features-image">
-                            <div class="item-wrapper">
-                                <div class="item-content">
-                                    <div class="item-img">
-                                        <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1488998427799-e3362cec87c3.jpeg" alt="">
-                                    </div>
-                                    <div class="card-wrap">
-                                    </div>
-                                    <div class="card-box">
-                                        <h4 class="item-title mbr-fonts-style display-5">Registrazione Facile</h4>
-                                        <p class="item-desc mbr-fonts-style display-7">Entra in un attimo.</p>
-                                    </div>
-                                    <div class="number-wrapper">
-                                        <p class="item-number mbr-fonts-style display-5">
-                                            (1)
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="item-text mbr-fonts-style display-7">Creare un account è più veloce che dire 'ho dimenticato dove ho messo le chiavi'. Inserisci i dati e sei pronto a organizzare il tuo universo.</p>
-                                    <div class="mbr-section-btn">
-                                        <a class="btn btn-black-outline display-4" href="#">
-                                            <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
-                                            Registrati
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 item features-image">
-                            <div class="item-wrapper">
-                                <div class="item-content">
-                                    <div class="item-img">
-                                        <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1517673132405-a56a62b18caf.jpeg" alt="">
-                                    </div>
-                                    <div class="card-wrap">
-                                    </div>
-                                    <div class="card-box">
-                                        <h4 class="item-title mbr-fonts-style display-5">Gestione Note</h4>
-                                        <p class="item-desc mbr-fonts-style display-7">Modifica al volo.</p>
-                                    </div>
-                                    <div class="number-wrapper">
-                                        <p class="item-number mbr-fonts-style display-5">
-                                            (2)
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="text-wrapper">
-                                    <p class="item-text mbr-fonts-style display-7">Ogni nota è un piccolo tesoro. Modificala, aggiornala, cancellala o segnala come completata. Il potere è tuo, usalo saggiamente!</p>
-                                    <div class="mbr-section-btn">
-                                        <a class="btn btn-black-outline display-4" href="#">
-                                            <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
-                                            Registrati
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="clients01 framem5 cid-v5GoSdCyMt" id="clients-1-v5GoSdCyMt">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row title-wrap">
-                        <div class="col-12 col-lg-6 card">
-                            <div class="title-wrapper">
-                                <div class="label-wrapper">
-                                    <div class="label-wrap">
-                                        <div class="decor-wrapper">
-                                            <div class="decor decor_1"></div>
-                                            <div class="decor decor_2"></div>
-                                            <div class="decor decor_3"></div>
-                                            <div class="decor decor_4"></div>
-                                            <div class="decor decor_5"></div>
-                                        </div>
-                                        <p class="mbr-label mbr-fonts-style display-7">
-                                            (Chi Ci Usa)
-                                        </p>
-                                    </div>
-                                </div>
-                                <h2 class="mbr-section-title mbr-fonts-style display-2">Menti Brillanti Come Te</h2>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 card">
-                            <div class="desc-wrapper">
-                                <p class="mbr-desc mbr-fonts-style display-5">Persone che amano l'ordine.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-wrap row">
-                        <div class="col-12 card">
-                            <div class="items-wrapper">
-                                <div class="item features-image">
-                                    <div class="item-wrapper">
-                                        <div class="item-img">
-                                            <img src="https://r.mobirisesite.com/2119036/assets/images/short3.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item features-image">
-                                    <div class="item-wrapper">
-                                        <div class="item-img">
-                                            <img src="https://r.mobirisesite.com/2119036/assets/images/short4.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item features-image">
-                                    <div class="item-wrapper">
-                                        <div class="item-img">
-                                            <img src="https://r.mobirisesite.com/2119036/assets/images/short6.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item features-image">
-                                    <div class="item-wrapper">
-                                        <div class="item-img">
-                                            <img src="https://r.mobirisesite.com/2119036/assets/images/short1.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item features-image">
-                                    <div class="item-wrapper">
-                                        <div class="item-img">
-                                            <img src="https://r.mobirisesite.com/2119036/assets/images/short5.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item features-image">
-                                    <div class="item-wrapper">
-                                        <div class="item-img">
-                                            <img src="https://r.mobirisesite.com/2119036/assets/images/short2.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item features-image">
-                                    <div class="item-wrapper">
-                                        <div class="item-img">
-                                            <img src="https://r.mobirisesite.com/2119036/assets/images/short3.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item features-image">
-                                    <div class="item-wrapper">
-                                        <div class="item-img">
-                                            <img src="https://r.mobirisesite.com/2119036/assets/images/short4.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="article03 framem5 cid-v5GoSdCnhr" id="generic-text-3-v5GoSdCnhr">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row title-wrap">
-                        <div class="col-12 col-lg-6 card">
-                            <div class="title-wrapper">
-                                <div class="label-wrapper">
-                                    <div class="label-wrap">
-                                        <div class="decor-wrapper">
-                                            <div class="decor decor_1"></div>
-                                            <div class="decor decor_2"></div>
-                                            <div class="decor decor_3"></div>
-                                            <div class="decor decor_4"></div>
-                                            <div class="decor decor_5"></div>
-                                        </div>
-                                        <p class="mbr-label mbr-fonts-style display-7">
-                                            (Accedi)
-                                        </p>
-                                    </div>
-                                </div>
-                                <h3 class="mbr-section-subtitle mbr-fonts-style display-2">Ritorna al Lavoro</h3>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 card">
-                            <div class="desc-wrapper">
-                                <p class="mbr-desc mbr-fonts-style display-5">Le tue note ti aspettano.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-wrap row justify-content-between">
-                        <div class="col-12 col-lg-3 card">
-                            <div class="image-wrapper">
-                                <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1471107340929-a87cd0f5b5f3.jpeg" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 card">
-                            <div class="text-wrapper">
-                                <h2 class="mbr-section-title mbr-fonts-style display-1">Il Tuo Hub Personale</h2>
-                                <p class="mbr-text mbr-fonts-style display-7">Hai già un account? Fantastico! Accedi e ritrova tutte le tue idee, i tuoi piani e i tuoi sogni organizzati meticolosamente. Non perdere un secondo, il tuo prossimo grande pensiero potrebbe essere a portata di click.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="features02 framem5 cid-v5GoSdIzJV" id="features-1-v5GoSdIzJV">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row title-wrap">
-                        <div class="col-12 col-lg-6 card">
-                            <div class="title-wrapper">
-                                <div class="label-wrapper">
-                                    <div class="label-wrap">
-                                        <div class="decor-wrapper">
-                                            <div class="decor decor_1"></div>
-                                            <div class="decor decor_2"></div>
-                                            <div class="decor decor_3"></div>
-                                            <div class="decor decor_4"></div>
-                                            <div class="decor decor_5"></div>
-                                        </div>
-                                        <p class="mbr-label mbr-fonts-style display-7">
-                                            (Gestione Note)
-                                        </p>
-                                    </div>
-                                </div>
-                                <h2 class="mbr-section-title mbr-fonts-style display-2">Il Tuo Quartier Generale delle Idee</h2>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-3 card">
-                            <div class="desc-wrapper">
-                                <p class="mbr-desc mbr-fonts-style display-5">Organizza la tua vita digitale con stile e velocità.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-wrap row">
-                        <div class="col-12 item features-image">
-                            <div class="item-wrapper">
-                                <div class="item-img">
-                                    <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1550592704-6c76defa9985.jpeg" alt="">
-                                </div>
-                                <div class="card-wrap">
-                                </div>
-                                <div class="card-box">
-                                    <h4 class="item-title mbr-fonts-style display-5">Registrati</h4>
-                                    <p class="item-text mbr-fonts-style display-7">Crea il tuo account in un lampo, pronto a prendere appunti.</p>
-                                    
-                                </div>
-                                <div class="number-wrapper">
-                                    <p class="item-number mbr-fonts-style display-5">
-                                        (1)
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 item features-image">
-                            <div class="item-wrapper">
-                                <div class="item-img">
-                                    <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1573848953384-3be02021eb0b.jpeg" alt="">
-                                </div>
-                                <div class="card-wrap">
-                                </div>
-                                <div class="card-box">
-                                    <h4 class="item-title mbr-fonts-style display-5">Accedi</h4>
-                                    <p class="item-text mbr-fonts-style display-7">Rientra nel tuo spazio personale, dove le idee prendono forma.</p>
-                                    
-                                </div>
-                                <div class="number-wrapper">
-                                    <p class="item-number mbr-fonts-style display-5">
-                                        (2)
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 item features-image">
-                            <div class="item-wrapper">
-                                <div class="item-img">
-                                    <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1528938102132-4a9276b8e320.jpeg" alt="">
-                                </div>
-                                <div class="card-wrap">
-                                </div>
-                                <div class="card-box">
-                                    <h4 class="item-title mbr-fonts-style display-5">Le Tue Note</h4>
-                                    <p class="item-text mbr-fonts-style display-7">Visualizza, modifica e cancella ogni appunto con facilità.</p>
-                                    
-                                </div>
-                                <div class="number-wrapper">
-                                    <p class="item-number mbr-fonts-style display-5">
-                                        (3)
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="image01 framem5 cid-v5GoSdMaAn" id="generic-text-4-v5GoSdMaAn">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row title-wrap">
-                        <div class="col-12 col-lg-3 card">
-                            <div class="title-wrapper">
-                                <h2 class="mbr-section-title mbr-fonts-style display-2">Note Senza Limiti</h2>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6 card">
-                            <div class="text-wrapper">
-                                <p class="mbr-text mbr-fonts-style display-7">Dimentica fogli sparsi e promemoria dimenticati. Qui, ogni pensiero trova la sua casa, organizzato per data, priorità e stato. La tua mente merita un archivio impeccabile.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-wrap row">
-                        <div class="col-12 card">
-                            <div class="image-wrapper">
-                                <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1498050108023-c5249f4df085.jpeg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="slider02 mbr-embla framem5 cid-v5GoSe6w8V" id="features-6-v5GoSe6w8V">
-    
-    
-
-    <div class="content-wrap container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row">
-                        <div class="col-12 card">
-                            <div class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-auto-play-interval="3" data-draggable="true">
-                                <div class="embla__viewport is-draggable">
-                                    <div class="embla__container" style="transform: translate3d(0%, 0px, 0px);">
-                                        <div class="embla__slide slider-image item features-image is-selected">
-                                            <div class="slide-content">
-                                                <div class="item-wrapper">
-                                                    <div class="item-img">
-                                                        <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1554757387-fa0367573d09.jpeg" alt="">
-                                                    </div>
-                                                    <div class="decor-wrapper">
-                                                        <div class="decor-wrap">
-                                                            <div class="decor decor_1"></div>
-                                                            <div class="decor decor_2"></div>
-                                                            <div class="decor decor_3"></div>
-                                                            <div class="decor decor_4"></div>
-                                                            <div class="decor decor_5"></div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="item-title mbr-fonts-style display-5">Nome Nota</h4>
-                                                    <p class="item-text mbr-fonts-style display-7">Dai un titolo accattivante a ogni tua creazione, rendendola subito riconoscibile.</p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="embla__slide slider-image item features-image is-selected">
-                                            <div class="slide-content">
-                                                <div class="item-wrapper">
-                                                    <div class="item-img">
-                                                        <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1542435503-956c469947f6.jpeg" alt="">
-                                                    </div>
-                                                    <div class="decor-wrapper">
-                                                        <div class="decor-wrap">
-                                                            <div class="decor decor_1"></div>
-                                                            <div class="decor decor_2"></div>
-                                                            <div class="decor decor_3"></div>
-                                                            <div class="decor decor_4"></div>
-                                                            <div class="decor decor_5"></div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="item-title mbr-fonts-style display-5">Descrizione Dettagliata</h4>
-                                                    <p class="item-text mbr-fonts-style display-7">Aggiungi tutti i dettagli che vuoi, senza limiti di spazio per le tue idee.</p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="embla__slide slider-image item features-image is-selected">
-                                            <div class="slide-content">
-                                                <div class="item-wrapper">
-                                                    <div class="item-img">
-                                                        <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1598620617148-c9e8ddee6711.jpeg" alt="">
-                                                    </div>
-                                                    <div class="decor-wrapper">
-                                                        <div class="decor-wrap">
-                                                            <div class="decor decor_1"></div>
-                                                            <div class="decor decor_2"></div>
-                                                            <div class="decor decor_3"></div>
-                                                            <div class="decor decor_4"></div>
-                                                            <div class="decor decor_5"></div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="item-title mbr-fonts-style display-5">Scadenza Precisa</h4>
-                                                    <p class="item-text mbr-fonts-style display-7">Imposta una data di scadenza per non perdere mai di vista i tuoi impegni.</p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="embla__slide slider-image item features-image is-selected">
-                                            <div class="slide-content">
-                                                <div class="item-wrapper">
-                                                    <div class="item-img">
-                                                        <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1486312338219-ce68d2c6f44d.jpeg" alt="">
-                                                    </div>
-                                                    <div class="decor-wrapper">
-                                                        <div class="decor-wrap">
-                                                            <div class="decor decor_1"></div>
-                                                            <div class="decor decor_2"></div>
-                                                            <div class="decor decor_3"></div>
-                                                            <div class="decor decor_4"></div>
-                                                            <div class="decor decor_5"></div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="item-title mbr-fonts-style display-5">Completato?</h4>
-                                                    <p class="item-text mbr-fonts-style display-7">Spunta la casella quando hai finito, per un senso di appagamento visivo.</p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="embla__slide slider-image item features-image">
-                                            <div class="slide-content">
-                                                <div class="item-wrapper">
-                                                    <div class="item-img">
-                                                        <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1483546416237-76fd26bbcdd1.jpeg" alt="">
-                                                    </div>
-                                                    <div class="decor-wrapper">
-                                                        <div class="decor-wrap">
-                                                            <div class="decor decor_1"></div>
-                                                            <div class="decor decor_2"></div>
-                                                            <div class="decor decor_3"></div>
-                                                            <div class="decor decor_4"></div>
-                                                            <div class="decor decor_5"></div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="item-title mbr-fonts-style display-5">Modifica Facile</h4>
-                                                    <p class="item-text mbr-fonts-style display-7">Hai cambiato idea? Nessun problema, aggiorna i dettagli in un attimo.</p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="embla__slide slider-image item features-image">
-                                            <div class="slide-content">
-                                                <div class="item-wrapper">
-                                                    <div class="item-img"> 
-                                                        <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1501618669935-18b6ecb13d6d.jpeg" alt="">
-                                                    </div>
-                                                    <div class="decor-wrapper">
-                                                        <div class="decor-wrap">
-                                                            <div class="decor decor_1"></div>
-                                                            <div class="decor decor_2"></div>
-                                                            <div class="decor decor_3"></div>
-                                                            <div class="decor decor_4"></div>
-                                                            <div class="decor decor_5"></div>
-                                                        </div>
-                                                    </div>
-                                                    <h4 class="item-title mbr-fonts-style display-5">Elimina Senza Pensieri</h4>
-                                                    <p class="item-text mbr-fonts-style display-7">Fai pulizia quando serve, ogni nota ha il suo pulsante 'elimina'.</p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="embla__button embla__button--prev" disabled="disabled">
-                                    <span class="mobi-mbri mobi-mbri-left mbr-iconfont" aria-hidden="true"></span>
-                                    <span class="sr-only visually-hidden visually-hidden visually-hidden visually-hidden visually-hidden">Previous</span>
-                                </button>
-                                <button class="embla__button embla__button--next">
-                                    <span class="mobi-mbri mobi-mbri-right mbr-iconfont" aria-hidden="true"></span>
-                                    <span class="sr-only visually-hidden visually-hidden visually-hidden visually-hidden visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="header02 framem5 cid-v5GoSex38y" id="hero-2-v5GoSex38y">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row justify-content-center">
-                        <div class="col-12 card">
-                            <div class="title-wrapper">
-                                <h2 class="mbr-section-title mbr-fonts-style display-1">
-                                    <strong>Note Magiche</strong>
-                                </h2>
-                            </div>
-                            <div class="text-wrapper">
-                                <p class="mbr-text mbr-fonts-style display-5">La tua mente è un caos? Metti ordine con noi. Dimentica la carta, abbraccia il digitale.</p>
-                            </div>
-                            <div class="card-wrap">
-                                <div class="mbr-section-btn">
-                                    <a class="btn btn-black-outline display-4" href="#">
-                                        <span class="mobi-mbri mobi-mbri-right mbr-iconfont mbr-iconfont-btn"></span>
-                                        Inizia Ora
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="image-wrapper">
-                                <img src="https://r.mobirisesite.com/2119036/assets/images/photo-1520970014086-2208d157c9e2.jpeg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="footer01 framem5 cid-v5GoSeB5VI" once="footers" id="footer-1-v5GoSeB5VI">
-    
-
-    
-    
-
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="content-wrapper">
-                    <div class="border-wrap border_1"></div>
-                    <div class="border-wrap border_2"></div>
-                    <div class="border-wrap border_3"></div>
-                    <div class="border-wrap border_4"></div>
-                    <div class="border-wrap border_5"></div>
-                    <div class="content-wrap row">
-                        
-                        
-                        
-                        
-                        <div class="col-12">
-                            <p class="mbr-copy mbr-fonts-style display-7">Note Magiche © 2024. Tutti i diritti sono riservati, non copiare!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-  <script src="https://r.mobirisesite.com/2119036/assets/web/assets/jquery/jquery.min.js?rnd=1766015236473"></script>
-  <script src="https://r.mobirisesite.com/2119036/assets/bootstrap/js/bootstrap.bundle.min.js?rnd=1766015236473"></script>
-  <script src="https://r.mobirisesite.com/2119036/assets/smoothscroll/smooth-scroll.js?rnd=1766015236473"></script>
-  <script src="https://r.mobirisesite.com/2119036/assets/ytplayer/index.js?rnd=1766015236473"></script>
-  <script src="https://r.mobirisesite.com/2119036/assets/dropdown/js/navbar-dropdown.js?rnd=1766015236473"></script>
-  <script src="https://r.mobirisesite.com/2119036/assets/vimeoplayer/player.js?rnd=1766015236473"></script>
-  <script src="https://r.mobirisesite.com/2119036/assets/embla/embla.min.js?rnd=1766015236473"></script>
-  <script src="https://r.mobirisesite.com/2119036/assets/embla/script.js?rnd=1766015236473"></script>
-  <script src="https://r.mobirisesite.com/2119036/assets/theme/js/script.js?rnd=1766015236473"></script>
-  
-  
-  
-
-
-</body></html>
+</body>
+</html>
