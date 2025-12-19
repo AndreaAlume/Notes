@@ -14,10 +14,14 @@ function emitLogin() {
   loginBtn.addEventListener("click", function(e) {
     e.preventDefault();
 
+    const nameInput = document.getElementById("name-input");
     const emailInput = document.getElementById("email-input");
     const passwordInput = document.getElementById("password-input");
+    
     const emailError = document.getElementById("email-error");
     const passwordError = document.getElementById("password-error");
+    
+    const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
 
@@ -59,12 +63,13 @@ function emitLogin() {
     }
 
 
-  fetch("http://localhost:5183/api/login", {
+  fetch("http://localhost:5183/api/registration", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
+      name: name,
       email: email,
       password: password
     })
