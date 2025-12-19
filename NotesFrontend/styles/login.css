@@ -20,7 +20,7 @@ body {
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* più compatto */
+    gap: 10px;
 }
 
 /* Welcome */
@@ -41,7 +41,6 @@ body {
     display: flex;
     gap: 15px;
     justify-content: center;
-    margin-bottom: 15px;
 }
 
 .google-container,
@@ -49,7 +48,7 @@ body {
     background-color: #1a1a1a;
     width: 100%;
     max-width: 180px;
-    height: 45px; /* leggermente più compatto */
+    height: 45px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -67,6 +66,7 @@ body {
     background-color: #2c2c2c;
     transform: translateY(-2px);
 }
+
 
 /* Divider */
 .break-line {
@@ -89,10 +89,12 @@ body {
     white-space: nowrap;
 }
 
+
 /* Input fields */
 .email > h4 {
     margin: 0 0 5px 0;
     font-weight: 500;
+    position: relative;
 }
 
 .email-input,
@@ -104,7 +106,7 @@ body {
     font-size: 13px;
     width: 100%;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     transition: all 0.3s ease;
 }
 
@@ -114,6 +116,40 @@ body {
     box-shadow: 0 0 6px rgba(3,202,0,0.5);
     outline: none;
 }
+
+.email-input.error,
+.password-input.error {
+    border-color: #e63946;
+    outline: none;
+}
+
+.email-error-message,
+.password-error-message {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 10px;
+  color: #e63946;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.email-error-message.show,
+.password-error-message.show {
+    opacity: 1;
+}
+
+/* Forgot & Signup */
+.forgot {
+    color: #ff00ff;
+    font-size: 12px;
+    text-align: right;
+    display: block;
+    margin-top: 2px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: -25px;
+    margin-bottom: 30px;
+}
+
 
 /* Login Button */
 .login-btn {
@@ -136,16 +172,6 @@ body {
     font-weight: 600;
 }
 
-/* Forgot & Signup */
-.forgot {
-    color: #ff00ff;
-    font-size: 12px;
-    text-align: right;
-    display: block;
-    margin-top: 2px;
-    cursor: pointer;
-    text-decoration: underline;
-}
 
 .dont-have {
     font-size: 14px;

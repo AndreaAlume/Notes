@@ -14,29 +14,49 @@ function emitLogin() {
   loginBtn.addEventListener("click", function(e) {
     e.preventDefault();
 
-    const email = document.getElementById("email-input").value.trim();
-    const password = document.getElementById("password-input").value.trim();
+    const emailInput = document.getElementById("email-input");
+    const passwordInput = document.getElementById("password-input");
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
 
+    emailInput.classList.remove("error");
+    emailError.textContent = "";
+    emailError.classList.remove("show");
+    
     if (!validator.isEmail(email)) {
-      alert("Inserisci un'email valida!");
+      emailInput.classList.add("error")
+      emailError.textContent = "Email non valida";
+      emailError.classList.add("show");
       return;
     }
-
+    
     const isStrong = validator.isStrongPassword(password, {
       minLength: 8,
       minLowercase: 1,
       minUppercase: 1,
       minNumbers: 1,
-      minSymbols: 0
+      minSymbols: 1
     });
+    
+    passwordInput.classList.remove("error");
+    passwordError.textContent = "";
+    passwordError.classList.remove("show");
 
     if (!isStrong) {
-      alert("La password deve avere almeno 8 caratteri, una maiuscola e un numero!");
+      passwordInput.classList.add("error")
+      passwordError.textContent = "Password non valida";
+      passwordError.classList.add("show");
       return;
     }
 
     alert("Login valido! Procedi con l'autenticazione...");
   });
+}
+
+async function emitLoginGoogle() {
+
 }
 
 renderLogin();
