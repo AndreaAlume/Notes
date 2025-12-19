@@ -1,5 +1,5 @@
 async function renderLogin() {
-  const response = await fetch('../templates/login.hbs');
+  const response = await fetch('../templates/register.hbs');
   const source = await response.text();
   const template = Handlebars.compile(source);
 
@@ -27,6 +27,7 @@ function emitLogin() {
     passwordInput.classList.remove("error");
     passwordError.textContent = "";
     passwordError.classList.remove("show");
+    
 
     if (validator.isEmpty(email)) {
       emailError.textContent = "Inserisci l'email";

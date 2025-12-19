@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "NotesBackend.Security.AuthController",
+    "ContainingType": "NotesBackend.Security.LoginController",
     "Method": "Login",
     "RelativePath": "api/login",
     "HttpMethod": "POST",
@@ -142,7 +142,7 @@
   },
   {
     "ContainingType": "NotesBackend.Controllers.UserController",
-    "Method": "Get",
+    "Method": "GetAll",
     "RelativePath": "api/users",
     "HttpMethod": "GET",
     "IsController": true,
@@ -169,8 +169,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "NotesBackend.Models.User",
+        "Name": "admin",
+        "Type": "NotesBackend.Models.Dtos.AdminDto",
         "IsRequired": true
       }
     ],

@@ -23,7 +23,6 @@ namespace NotesBackend.Controllers
             var user = RegisterMapper.ConvertToDto(registerDto);
 
             user.Password = BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password, 8);
-
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return Ok($"Utente: {user.Name} creato correttamente");

@@ -3,9 +3,9 @@ using NotesBackend.Models.Dtos;
 
 namespace NotesBackend.Services.Mappers
 {
-    public class AuthMapper
+    public class LoginMapper
     {
-        private AuthMapper() { }
+        private LoginMapper() { }
 
         public static LoginDto ConvertToDto(User user)
         {

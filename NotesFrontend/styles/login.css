@@ -39,7 +39,7 @@ body {
 /* Provider buttons */
 .provider {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
 }
 

@@ -13,7 +13,7 @@
     "/api/login": {
       "post": {
         "tags": [
-          "Auth"
+          "Login"
         ],
         "requestBody": {
           "content": {
@@ -87,17 +87,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/AdminDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/AdminDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/AdminDto"
               }
             }
           },
@@ -440,6 +440,20 @@
   },
   "components": {
     "schemas": {
+      "AdminDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
       "LoginDto": {
         "type": "object",
         "properties": {
@@ -630,7 +644,7 @@
   },
   "tags": [
     {
-      "name": "Auth"
+      "name": "Login"
     },
     {
       "name": "User"

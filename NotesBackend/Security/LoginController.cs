@@ -6,11 +6,11 @@ namespace NotesBackend.Security
 {
     [Route("api")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class LoginController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public AuthController(AppDbContext context)
+        public LoginController(AppDbContext context)
         {
             _context = context;
         }
@@ -18,17 +18,20 @@ namespace NotesBackend.Security
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginDto user)
         {
-            var passwordHash = BCrypt.Net.BCrypt.EnhancedHashPassword(user.Password, 8);
-            var passwordVerify = BCrypt.Net.BCrypt.EnhancedVerify("Ciao", passwordHash);
             
             var cred = _context.Users.FirstOrDefault(u => u.Email == user.Email);
             
-            if (cred == null || passwordVerify != false) 
+            if (cred == null) { return Unauthorized("Credenziali non valide"); }
+
+            var passwordVerify = BCrypt.Net.BCrypt.EnhancedVerify(user.Password, cred.Password);
+
+            if (passwordVerify)
             {
-                return Unauthorized("Credenziali non valide");
+                var token = JwtTokenService.GenerateToken(cred.Email, cred.Role);
+                return Ok(new { token = token });
             }
-            var token = JwtTokenService.GenerateToken(cred.Email, cred.Role);
-            return Ok(new { token = token });
+
+            return BadRequest("Credenziali non valide");
         }
 
     }

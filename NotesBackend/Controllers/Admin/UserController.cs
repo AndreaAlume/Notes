@@ -2,11 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NotesBackend.Models;
+using NotesBackend.Models.Dtos;
+using NotesBackend.Services.Mappers;
 
 
 namespace NotesBackend.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin, User")]
     [ApiController]
     [Route("api/users")]
     public class UserController : ControllerBase
@@ -20,7 +22,7 @@ namespace NotesBackend.Controllers
 
         // GET: api/users
         [HttpGet]
-        public async Task<IEnumerable<User>> Get()
+        public async Task<IEnumerable<User>> GetAll()
         {
             return await _context.Users.ToListAsync();
         }
@@ -36,11 +38,13 @@ namespace NotesBackend.Controllers
 
         // POST api/users
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] User user)
+        public async Task<IActionResult >Post([FromBody] AdminDto admin)
         {
-            _context.Users.Add(user);
+            var adminDto = AdminMapper.ConvertToDto(admin);
+            adminDto.Password = BCrypt.Net.BCrypt.EnhancedHashPassword(admin.Password, 8);
+            var adminVerify = _context.Users.Add(adminDto);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
+            return Ok($"{admin.Name} creato correttamente");
         }
 
         // PUT api/users/id

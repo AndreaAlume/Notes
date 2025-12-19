@@ -1,7 +1,6 @@
 ﻿using NotesBackend.Models.Dtos;
 using NotesBackend.Models;
 
-
 namespace NotesBackend.Services.Mappers
 {
     public class RegisterMapper
