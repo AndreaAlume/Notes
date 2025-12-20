@@ -1,98 +1,64 @@
+import { initGoogleRegister } from './google.js';
+
 async function renderLogin() {
+  // Carica template Handlebars
   const response = await fetch('../templates/register.hbs');
   const source = await response.text();
   const template = Handlebars.compile(source);
 
+  // Inserisci HTML
   document.querySelector('.main').innerHTML = template({});
-  emitLogin()
 
+  // Inizializza registrazione manuale
+  emitManualLogin();
+
+  // Inizializza login Google
+  initGoogleRegister();
 }
 
-function emitLogin() {
-    const loginBtn = document.getElementById("login");
+function emitManualLogin() {
+  const loginBtn = document.getElementById("login");
 
-  loginBtn.addEventListener("click", function(e) {
+  loginBtn.addEventListener("click", async (e) => {
     e.preventDefault();
 
-    const nameInput = document.getElementById("name-input");
-    const emailInput = document.getElementById("email-input");
-    const passwordInput = document.getElementById("password-input");
-    
+    const name = document.getElementById("name-input").value.trim();
+    const email = document.getElementById("email-input").value.trim();
+    const password = document.getElementById("password-input").value.trim();
+
+    // Validazioni base
     const emailError = document.getElementById("email-error");
     const passwordError = document.getElementById("password-error");
-    
-    const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    emailInput.classList.remove("error");
     emailError.textContent = "";
-    emailError.classList.remove("show");
-    passwordInput.classList.remove("error");
     passwordError.textContent = "";
-    passwordError.classList.remove("show");
-    
 
-    if (validator.isEmpty(email)) {
-      emailError.textContent = "Inserisci l'email";
-      emailInput.classList.add("error");
-      emailError.classList.add("show");
-    } else if (!validator.isEmail(email)) {
+    if (!email || !validator.isEmail(email)) {
       emailError.textContent = "Email non valida";
-      emailInput.classList.add("error");
-      emailError.classList.add("show");
+      return;
     }
 
-    if (validator.isEmpty(password)) {
-      passwordError.textContent = "Inserisci la password";
-      passwordInput.classList.add("error");
-      passwordError.classList.add("show");
-    } else if (
-      !validator.isStrongPassword(password, {
-        minLength: 8,
-        minLowercase: 1,
-        minUppercase: 1,
-        minNumbers: 1,
-        minSymbols: 1
-      })
-    ) {
-      passwordError.textContent =
-        "La password deve avere almeno 8 caratteri, una maiuscola, un numero e un carattere speciale";
-      passwordInput.classList.add("error");
-      passwordError.classList.add("show");
+    if (!password || !validator.isStrongPassword(password, { minLength: 8, minLowercase:1, minUppercase:1, minNumbers:1, minSymbols:1 })) {
+      passwordError.textContent = "Password non valida";
+      return;
     }
 
+    // Invio dati al backend
+    try {
+      const res = await fetch("http://localhost:5183/api/registration", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password })
+      });
 
-  fetch("http://localhost:5183/api/registration", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      password: password
-    })
-  })
-  .then(res => {
-    if (!res.ok) {
-      throw new Error("Errore dalla richiesta");
+      if (!res.ok) throw new Error("Errore dalla richiesta");
+
+      const data = await res.json();
+      console.log("TOKEN:", data.token);
+    } catch (err) {
+      console.error("ERRORE FETCH:", err);
     }
-    return res.json();
-  })
-  .then(data => {
-    console.log("TOKEN:", data.token);
-  })
-  .catch(err => {
-    console.error("ERRORE FETCH:", err);
-  });
-
-
   });
 }
 
-async function emitLoginGoogle() {
-
-}
-
+// Avvia tutto
 renderLogin();

@@ -23,11 +23,15 @@ public partial class User
 
     [Column("password")]
     [StringLength(255)]
-    public string Password { get; set; } = null!;
+    public string? Password { get; set; }
 
     [Column("role")]
     [StringLength(50)]
     public string Role { get; set; } = null!;
+
+    [Column("googleId")]
+    [StringLength(255)]
+    public string? GoogleId { get; set; }
 
     [InverseProperty("User")]
     public virtual ICollection<Note> Notes { get; set; } = new List<Note>();

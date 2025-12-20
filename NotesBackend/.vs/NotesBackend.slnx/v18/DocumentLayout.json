@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\admin\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\admin\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\models\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:models\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\user\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\user\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\Admin\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Admin\\UserController.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\Admin\\UserController.cs",
-              "RelativeToolTip": "Controllers\\Admin\\UserController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Dtos\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "Models\\Dtos\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Dtos\\RegisterDto.cs",
+              "RelativeToolTip": "Models\\Dtos\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T22:38:40.966Z",
+              "WhenOpened": "2025-12-20T10:24:04.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Note.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Note.cs",
-              "RelativeDocumentMoniker": "Models\\Note.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Note.cs",
-              "RelativeToolTip": "Models\\Note.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "RegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\User\\RegistrationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\User\\RegistrationController.cs",
+              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\User\\RegistrationController.cs",
+              "RelativeToolTip": "Controllers\\User\\RegistrationController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T22:38:14.195Z",
+              "WhenOpened": "2025-12-20T10:23:59.438Z",
               "EditorCaption": ""
             }
           ]

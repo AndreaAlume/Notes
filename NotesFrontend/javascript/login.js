@@ -1,5 +1,3 @@
-import { getUserInfo } from "./google";
-
 async function renderLogin() {
   const response = await fetch('../templates/login.hbs');
   const source = await response.text();
@@ -85,10 +83,6 @@ function emitLogin() {
 
 
   });
-}
-
-async function emitLoginGoogle() {
-
 }
 
 renderLogin();

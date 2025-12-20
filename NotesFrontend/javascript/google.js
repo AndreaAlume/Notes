@@ -1,67 +1,74 @@
-const GOOGLE_ID = "1011033418492-ajtm3rvmike5vdjd8bdaep80t5boh98u.apps.googleusercontent.com";
+export const GOOGLE_ID = "1011033418492-ajtm3rvmike5vdjd8bdaep80t5boh98u.apps.googleusercontent.com";
 
 let tokenGoogle;
-let accessToken;
 
-// Inizializza Google quando la libreria è caricata
-function initializeGoogle() {
-    tokenGoogle = google.accounts.oauth2.initTokenClient({
-        client_id: GOOGLE_ID,
-        scope: 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
-        callback: (response) => {
-            if (response.access_token) {
-                accessToken = response.access_token;
-                getUserInfo(accessToken);
-            }
-        },
+export function initGoogleRegister() {
+  const btn = document.getElementById('google-btn');
+  if (!btn) {
+    console.error("Bottone Google non trovato");
+    return;
+  }
+
+  // Inizializza Google
+  tokenGoogle = google.accounts.oauth2.initTokenClient({
+    client_id: GOOGLE_ID,
+    scope: 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
+    callback: async (response) => {
+      if (response.access_token) {
+        const userInfo = await getUserInfo(response.access_token);
+        emitRegisterGoogle(userInfo);
+      }
+    }
+  });
+
+  // Evento click
+  btn.addEventListener('click', handleGoogleRegister);
+}
+
+function handleGoogleRegister() {
+  if (!tokenGoogle) {
+    console.error("Google non inizializzato");
+    return;
+  }
+  tokenGoogle.requestAccessToken();
+}
+
+async function getUserInfo(token) {
+  try {
+    const res = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
+      headers: { Authorization: `Bearer ${token}` }
     });
+    console.log(res);
+    return await res.json();
+  } catch (err) {
+    console.error(err);
+  }
 }
 
-// Funzione da chiamare quando clicchi il bottone
-function handleGoogleLogin() {
-    if (!tokenGoogle) {
-        console.error('Google non è ancora inizializzato!');
-        return;
-    }
-    tokenGoogle.requestAccessToken();
+async function emitRegisterGoogle(googleData) {
+  console.log("✅ DATI RICEVUTI DA GOOGLE:");
+  console.log("Nome:", googleData.name);
+  console.log("Email:", googleData.email);
+  console.log("Google ID:", googleData.id);
+  console.log("Foto:", googleData.picture);
+  /*
+  try {
+    const res = await fetch("http://localhost:5183/api/registration", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: googleData.name,
+        email: googleData.email,
+        googleId: googleData.id
+      })
+    });
+
+    if (!res.ok) throw new Error("Errore dalla richiesta");
+
+    const data = await res.json();
+    console.log("TOKEN GOOGLE:", data.token);
+  } catch (err) {
+    console.error("ERRORE FETCH GOOGLE:", err);
+  }
+    */
 }
-
-export async function getUserInfo(token) {
-    try {
-        const response = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
-
-        if (response.ok) {
-            const userInfo = await response.json();
-            
-            console.log('Name: ', userInfo.name)
-            console.log('Google ID:', userInfo.id);
-            console.log('Email:', userInfo.email);
-            
-        } else {
-            console.error('Errore nel recupero delle informazioni utente');
-        }
-    } catch (error) {
-        console.error('Errore:', error);
-    }
-
-    return userInfo;
-}
-
-// ⚠️ IMPORTANTE: Aspetta che Google sia caricato
-window.onload = function() {
-    // Dai tempo alla libreria Google di caricarsi
-    setTimeout(() => {
-        if (typeof google !== 'undefined') {
-            initializeGoogle();
-            
-            // Collega il bottone
-            document.getElementById('google-btn').addEventListener('click', handleGoogleLogin);
-        } else {
-            console.error('La libreria Google non è stata caricata!');
-        }
-    }, 500);
-};

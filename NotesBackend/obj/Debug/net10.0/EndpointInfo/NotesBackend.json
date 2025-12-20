@@ -570,7 +570,16 @@
             "type": "string"
           },
           "password": {
-            "type": "string"
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "googleId": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -622,12 +631,23 @@
           "password": {
             "maxLength": 255,
             "minLength": 0,
-            "type": "string"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "role": {
             "maxLength": 50,
             "minLength": 0,
             "type": "string"
+          },
+          "googleId": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "notes": {
             "type": "array",
