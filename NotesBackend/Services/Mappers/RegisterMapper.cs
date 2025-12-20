@@ -14,7 +14,8 @@ namespace NotesBackend.Services.Mappers
                 Name = user.Name,
                 Email = user.Email,
                 Password = user.Password,
-                Role = "User"
+                Role = "User",
+                GoogleId = user.GoogleId
             };
         }
     }

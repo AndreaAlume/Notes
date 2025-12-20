@@ -46,12 +46,13 @@ async function getUserInfo(token) {
 }
 
 async function emitRegisterGoogle(googleData) {
-  console.log("✅ DATI RICEVUTI DA GOOGLE:");
+  /*
+  console.log("DATI RICEVUTI DA GOOGLE:");
   console.log("Nome:", googleData.name);
   console.log("Email:", googleData.email);
   console.log("Google ID:", googleData.id);
   console.log("Foto:", googleData.picture);
-  /*
+  */
   try {
     const res = await fetch("http://localhost:5183/api/registration", {
       method: "POST",
@@ -70,5 +71,4 @@ async function emitRegisterGoogle(googleData) {
   } catch (err) {
     console.error("ERRORE FETCH GOOGLE:", err);
   }
-    */
 }
