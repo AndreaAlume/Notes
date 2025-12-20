@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    filter: blur(0.15rem);
 }
 
 /* Welcome */
