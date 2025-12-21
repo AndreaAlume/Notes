@@ -90,10 +90,10 @@ function emitManualRegister() {
       if (!res.ok) throw new Error("Errore dalla richiesta");
 
       const data = await res.json();
-      console.log("TOKEN:", data.token);
-    } catch (err) {
       successBox.classList.add("success");
       loginBox.classList.add("success");
+      console.log("TOKEN:", data.token);
+    } catch (err) {
       console.error("ERRORE FETCH:", err);
     }
   });
