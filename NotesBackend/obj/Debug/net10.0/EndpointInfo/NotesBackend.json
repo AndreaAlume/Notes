@@ -461,7 +461,16 @@
             "type": "string"
           },
           "password": {
-            "type": "string"
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "googleId": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },

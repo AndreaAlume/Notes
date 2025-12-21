@@ -1,45 +1,82 @@
 import { initGoogleRegister } from './google.js';
 
-async function renderLogin() {
-  // Carica template Handlebars
+async function renderRegister() {
   const response = await fetch('../templates/register.hbs');
   const source = await response.text();
   const template = Handlebars.compile(source);
 
-  // Inserisci HTML
   document.querySelector('.main').innerHTML = template({});
 
-  // Inizializza registrazione manuale
-  emitManualLogin();
+  emitManualRegister();
 
-  // Inizializza login Google
   initGoogleRegister();
 }
 
-function emitManualLogin() {
+function emitManualRegister() {
   const loginBtn = document.getElementById("login");
 
   loginBtn.addEventListener("click", async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("name-input").value.trim();
-    const email = document.getElementById("email-input").value.trim();
-    const password = document.getElementById("password-input").value.trim();
-
-    // Validazioni base
+    const successBox = document.getElementById("check-box");
+    const loginBox = document.getElementById("login");
+    const nameInput = document.getElementById("name-input");
+    const emailInput = document.getElementById("email-input");
+    const passwordInput = document.getElementById("password-input");
+    const nameError = document.getElementById("name-error");
     const emailError = document.getElementById("email-error");
     const passwordError = document.getElementById("password-error");
-    emailError.textContent = "";
-    passwordError.textContent = "";
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
 
-    if (!email || !validator.isEmail(email)) {
-      emailError.textContent = "Email non valida";
-      return;
+    nameInput.classList.remove("error");
+    nameError.textContent = "";
+    nameError.classList.remove("show");
+    emailInput.classList.remove("error");
+    emailError.textContent = "";
+    emailError.classList.remove("show");
+    passwordInput.classList.remove("error");
+    passwordError.textContent = "";
+    passwordError.classList.remove("show");
+
+    if (!name) {
+      nameError.textContent = "Inserisci il nome";
+      nameInput.classList.add("error");
+      nameError.classList.add("show");
+      return
     }
 
-    if (!password || !validator.isStrongPassword(password, { minLength: 8, minLowercase:1, minUppercase:1, minNumbers:1, minSymbols:1 })) {
-      passwordError.textContent = "Password non valida";
-      return;
+    if (validator.isEmpty(email)) {
+      emailError.textContent = "Inserisci l'email";
+      emailInput.classList.add("error");
+      emailError.classList.add("show");
+      return
+    } else if (!validator.isEmail(email)) {
+      emailError.textContent = "Email non valida";
+      emailInput.classList.add("error");
+      emailError.classList.add("show");
+      return
+    }
+
+    if (validator.isEmpty(password)) {
+      passwordError.textContent = "Inserisci la password";
+      passwordInput.classList.add("error");
+      passwordError.classList.add("show");
+      return
+    } else if (
+      !validator.isStrongPassword(password, {
+        minLength: 8,
+        minLowercase: 1,
+        minUppercase: 1,
+        minNumbers: 1,
+        minSymbols: 1
+      })
+    ) {
+      passwordError.textContent =
+        "La password deve avere almeno 8 caratteri, una maiuscola, un numero e un carattere speciale";
+      passwordInput.classList.add("error");
+      passwordError.classList.add("show");
     }
 
     // Invio dati al backend
@@ -54,6 +91,8 @@ function emitManualLogin() {
 
       const data = await res.json();
       console.log("TOKEN:", data.token);
+      successBox.classList.add("success");
+      loginBox.classList.add("success");
     } catch (err) {
       console.error("ERRORE FETCH:", err);
     }
@@ -61,4 +100,4 @@ function emitManualLogin() {
 }
 
 // Avvia tutto
-renderLogin();
+renderRegister();

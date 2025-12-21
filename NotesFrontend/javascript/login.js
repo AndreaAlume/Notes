@@ -1,25 +1,32 @@
+import { initGoogleLogin } from './google.js';
+
 async function renderLogin() {
   const response = await fetch('../templates/login.hbs');
   const source = await response.text();
   const template = Handlebars.compile(source);
 
   document.querySelector('.main').innerHTML = template({});
-  emitLogin()
+  emitManualLogin()
+
+  initGoogleLogin()
 
 }
 
-function emitLogin() {
-    const loginBtn = document.getElementById("login");
+function emitManualLogin() {
+    const loginBtn = document.getElementById("login-btn");
 
-  loginBtn.addEventListener("click", function(e) {
+  loginBtn.addEventListener("click", async (e) => {
     e.preventDefault();
 
+    const successBox = document.getElementById("check-box");
+    const loginBox = document.getElementById("login");
     const emailInput = document.getElementById("email-input");
     const passwordInput = document.getElementById("password-input");
     const emailError = document.getElementById("email-error");
     const passwordError = document.getElementById("password-error");
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
+    
 
     emailInput.classList.remove("error");
     emailError.textContent = "";
@@ -27,6 +34,7 @@ function emitLogin() {
     passwordInput.classList.remove("error");
     passwordError.textContent = "";
     passwordError.classList.remove("show");
+
 
     if (validator.isEmpty(email)) {
       emailError.textContent = "Inserisci l'email";
@@ -75,12 +83,13 @@ function emitLogin() {
     return res.json();
   })
   .then(data => {
+    successBox.classList.add("success");
+    loginBox.classList.add("success");
     console.log("TOKEN:", data.token);
   })
   .catch(err => {
     console.error("ERRORE FETCH:", err);
-  });
-
+  });  
 
   });
 }

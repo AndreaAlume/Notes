@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NotesBackend.Models;
 using NotesBackend.Models.Dtos;
+using System.Reflection.Metadata.Ecma335;
 
 namespace NotesBackend.Security
 {
@@ -20,15 +21,27 @@ namespace NotesBackend.Security
         {
             
             var cred = _context.Users.FirstOrDefault(u => u.Email == user.Email);
-            
+
             if (cred == null) { return Unauthorized("Credenziali non valide"); }
 
-            var passwordVerify = BCrypt.Net.BCrypt.EnhancedVerify(user.Password, cred.Password);
-
-            if (passwordVerify)
+            else if (user.Password != null)
             {
-                var token = JwtTokenService.GenerateToken(cred.Email, cred.Role);
-                return Ok(new { token = token });
+                var passwordVerify = BCrypt.Net.BCrypt.EnhancedVerify(user.Password, cred.Password);
+
+                if (passwordVerify)
+                {
+                    var token = JwtTokenService.GenerateToken(cred.Email, cred.Role);
+                    return Ok(new { token = token });
+                }
+            }
+            else if (user.GoogleId != null)
+            {
+                var googleIdVerify = _context.Users.FirstOrDefault(u => u.GoogleId == user.GoogleId);
+                if (googleIdVerify != null) 
+                {
+                    var token = JwtTokenService.GenerateToken(cred.Email, cred.Role);
+                    return Ok(new { token = token });
+                }
             }
 
             return BadRequest("Credenziali non valide");

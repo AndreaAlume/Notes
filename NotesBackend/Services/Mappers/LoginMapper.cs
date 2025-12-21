@@ -12,7 +12,8 @@ namespace NotesBackend.Services.Mappers
             return new LoginDto
             {
                 Email = user.Email,
-                Password = user.Password
+                Password = user.Password,
+                GoogleId = user.GoogleId
             };
         }
     }
