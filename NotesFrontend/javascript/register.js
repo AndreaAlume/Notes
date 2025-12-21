@@ -13,7 +13,7 @@ async function renderRegister() {
 }
 
 function emitManualRegister() {
-  const loginBtn = document.getElementById("login");
+  const loginBtn = document.getElementById("login-btn");
 
   loginBtn.addEventListener("click", async (e) => {
     e.preventDefault();
@@ -91,9 +91,9 @@ function emitManualRegister() {
 
       const data = await res.json();
       console.log("TOKEN:", data.token);
+    } catch (err) {
       successBox.classList.add("success");
       loginBox.classList.add("success");
-    } catch (err) {
       console.error("ERRORE FETCH:", err);
     }
   });
