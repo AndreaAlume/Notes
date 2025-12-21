@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bWqSUxuonrQ=",
+  "dgSpecHash": "Dc6rChrBZd8=",
   "success": true,
   "projectFilePath": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\NotesBackend.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\finso\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512",
     "C:\\Users\\finso\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\finso\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\finso\\.nuget\\packages\\scalar.aspnetcore\\2.11.9\\scalar.aspnetcore.2.11.9.nupkg.sha512",
     "C:\\Users\\finso\\.nuget\\packages\\system.clientmodel\\1.5.1\\system.clientmodel.1.5.1.nupkg.sha512",
     "C:\\Users\\finso\\.nuget\\packages\\system.codedom\\9.0.0\\system.codedom.9.0.0.nupkg.sha512",
     "C:\\Users\\finso\\.nuget\\packages\\system.composition\\9.0.0\\system.composition.9.0.0.nupkg.sha512",

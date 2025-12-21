@@ -71,10 +71,7 @@ function emitManualLogin() {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      email: email,
-      password: password
-    })
+    body: JSON.stringify({ email, password })
   })
   .then(res => {
     if (!res.ok) {

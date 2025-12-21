@@ -1,7 +1,8 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Identity;
 using NotesBackend.Models;
+using Scalar.AspNetCore;
 using System.Security.Claims;
 
 
@@ -47,6 +48,7 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+app.MapScalarApiReference();
 app.UseCors("AllowAll");
 
 if (app.Environment.IsDevelopment())

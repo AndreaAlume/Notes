@@ -30,6 +30,10 @@ export function initGoogleLogin() {
       if (response.access_token) {
         const userInfo = await getUserInfo(response.access_token);
         emitLoginrGoogle(userInfo);
+        const successBox = document.getElementById("check-box");
+        const loginBox = document.getElementById("login");
+        successBox.classList.add("success");
+        loginBox.classList.add("success");
       }
     }
   });
@@ -108,6 +112,10 @@ async function emitLoginrGoogle(googleData) {
 
     const data = await res.json();
     console.log("TOKEN GOOGLE:", data.token);
+    const successBox = document.getElementById("check-box");
+    const loginBox = document.getElementById("login");
+    successBox.classList.add("success");
+    loginBox.classList.add("success");
   } catch (err) {
     console.error("ERRORE FETCH GOOGLE:", err);
   }
