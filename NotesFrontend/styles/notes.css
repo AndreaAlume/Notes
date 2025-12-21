@@ -1,0 +1,107 @@
+body {
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 30%;
+}
+
+
+.notes-list {
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notes-list:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+.note-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+.note-content {
+    color: #9a9a9a;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.date-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151515;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.date-label {
+    color: #b0b0b0;
+}
+
+.date-value {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+.button-box {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+button {
+    height: 42px;
+    min-width: 110px;
+    font-weight: 600;
+    border: none;
+    border-radius: 1.1em;
+    background-color: #212121;
+    cursor: pointer;
+    color: white;
+    padding: 0 16px;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #3a3a3a;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+}
+
+/* Action states */
+.complete-btn:active {
+    background-color: #9acd32;
+    color: #000;
+    transform: scale(0.96);
+}
+
+.modify-btn:active {
+    background-color: #2f55ff;
+    transform: scale(0.96);
+}
+
+.delete-btn:active {
+    background-color: #ff2f2f;
+    transform: scale(0.96);
+}
