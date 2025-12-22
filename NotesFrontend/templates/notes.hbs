@@ -1,23 +1,25 @@
 <div class="notes-container">
-    <article class="notes-list">
-        <header class="note-header">
-            <h3 class="note-title">Titolo nota</h3>
-        </header>
+    <h1>Le tue note</h1>
+    {{#each notes}}
+        <article class="notes-list">
+            <header class="note-header">
+                <h3 class="note-title">{{name}}</h3>
+            </header>
 
-        <p class="note-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Mollitia ipsa temporibus aspernatur sint hic repellendus modi vero possimus.
-        </p>
+            <p class="note-content">{{description}}</p>
 
-        <div class="date-note">
-            <span class="date-label">Scadenza</span>
-            <span class="date-value">11/05/2003</span>
-        </div>
+            <div class="date-note">
+                <span class="date-label">Scadenza</span>
+                <span class="date-value">{{expiryDate}}</span>
+            </div>
 
-        <div class="button-box">
-            <button type="button" class="complete-btn">✔ Completato</button>
-            <button type="button" class="modify-btn">✏ Modifica</button>
-            <button type="button" class="delete-btn">🗑 Elimina</button>
-        </div>
-    </article>
+            <div class="button-box">
+                <button type="button" class="complete-btn">✔ Completato</button>
+                <button type="button" class="modify-btn">✏ Modifica</button>
+                <button type="button" class="delete-btn">🗑 Elimina</button>
+            </div>
+        </article>
+    {{/each}}
+
+    <button type="button" class="add-btn">➕ Aggiungi</button>
 </div>

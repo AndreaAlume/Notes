@@ -84,6 +84,13 @@ async function emitRegisterGoogle(googleData) {
     if (!res.ok) throw new Error("Errore dalla richiesta");
     const data = await res.json();
     console.log("TOKEN GOOGLE:", data.token);
+    const successBox = document.getElementById("check-box");
+    const loginBox = document.getElementById("login");
+    successBox.classList.add("success");
+    loginBox.classList.add("success");
+    setTimeout(() => {
+      window.location.href = "/NotesFrontend/pages/notes.html";
+    }, 1000);
   } catch (err) {
     console.error("ERRORE FETCH GOOGLE:", err);
   }
@@ -116,6 +123,10 @@ async function emitLoginrGoogle(googleData) {
     const loginBox = document.getElementById("login");
     successBox.classList.add("success");
     loginBox.classList.add("success");
+    setTimeout(() => {
+      window.location.href = "/NotesFrontend/pages/notes.html";
+    }, 1000);
+
   } catch (err) {
     console.error("ERRORE FETCH GOOGLE:", err);
   }

@@ -83,6 +83,9 @@ function emitManualLogin() {
     successBox.classList.add("success");
     loginBox.classList.add("success");
     console.log("TOKEN:", data.token);
+    setTimeout(() => {
+        window.location.href = "/NotesFrontend/pages/notes.html";
+      }, 1000);
   })
   .catch(err => {
     console.error("ERRORE FETCH:", err);

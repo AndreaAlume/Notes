@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\security\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:security\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\admin\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\admin\\notecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\controllers\\user\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:controllers\\user\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\models\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:models\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\services\\mappers\\loginmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:services\\mappers\\loginmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\services\\mappers\\registermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:services\\mappers\\registermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|c:\\users\\finso\\desktop\\notes\\notesbackend\\models\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38EDFC76-42A5-F159-E0E0-3FBC86824622}|NotesBackend.csproj|solutionrelative:models\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,63 +31,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAADcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T12:05:28.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginMapper.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Services\\Mappers\\LoginMapper.cs",
-              "RelativeDocumentMoniker": "Services\\Mappers\\LoginMapper.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Services\\Mappers\\LoginMapper.cs",
-              "RelativeToolTip": "Services\\Mappers\\LoginMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T14:05:29.514Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Dtos\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Models\\Dtos\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Dtos\\LoginDto.cs",
-              "RelativeToolTip": "Models\\Dtos\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T14:04:58.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Security\\LoginController.cs",
               "RelativeDocumentMoniker": "Security\\LoginController.cs",
               "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Security\\LoginController.cs",
               "RelativeToolTip": "Security\\LoginController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAABjAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T13:37:13.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegisterMapper.cs",
-              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Services\\Mappers\\RegisterMapper.cs",
-              "RelativeDocumentMoniker": "Services\\Mappers\\RegisterMapper.cs",
-              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Services\\Mappers\\RegisterMapper.cs",
-              "RelativeToolTip": "Services\\Mappers\\RegisterMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T12:33:10.253Z"
+              "WhenOpened": "2025-12-22T08:36:35.821Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -105,9 +49,35 @@
               "RelativeDocumentMoniker": "Controllers\\User\\RegistrationController.cs",
               "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\User\\RegistrationController.cs",
               "RelativeToolTip": "Controllers\\User\\RegistrationController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABwAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T10:23:59.438Z"
+              "WhenOpened": "2025-12-21T19:27:26.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Note.cs",
+              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Note.cs",
+              "RelativeDocumentMoniker": "Models\\Note.cs",
+              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Models\\Note.cs",
+              "RelativeToolTip": "Models\\Note.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwCcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T14:35:23.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NoteController.cs",
+              "DocumentMoniker": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\Admin\\NoteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Admin\\NoteController.cs",
+              "ToolTip": "C:\\Users\\finso\\Desktop\\Notes\\NotesBackend\\Controllers\\Admin\\NoteController.cs",
+              "RelativeToolTip": "Controllers\\Admin\\NoteController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwC0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T14:30:14.042Z",
+              "EditorCaption": ""
             }
           ]
         }

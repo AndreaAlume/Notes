@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\Viewer\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
 
 </Project>

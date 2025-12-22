@@ -7,16 +7,25 @@ body {
     padding: 40px 30%;
 }
 
+h1 {
+    margin-top: 0;
+}
 
 .notes-list {
     background-color: #1c1c1c;
     border-radius: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notes-list.done {
+    color: #3a3a3a;
+    text-decoration: line-through;
 }
 
 .notes-list:hover {
@@ -45,6 +54,8 @@ body {
     align-items: center;
     background-color: #151515;
     padding: 10px 14px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 12px;
     font-size: 0.9rem;
 }
@@ -92,16 +103,20 @@ button:focus {
 /* Action states */
 .complete-btn:active {
     background-color: #9acd32;
-    color: #000;
     transform: scale(0.96);
 }
 
 .modify-btn:active {
-    background-color: #2f55ff;
+    background-color: #ff2f6a;
     transform: scale(0.96);
 }
 
 .delete-btn:active {
     background-color: #ff2f2f;
+    transform: scale(0.96);
+}
+
+.add-btn:active {
+    background-color: #32cdb3;
     transform: scale(0.96);
 }
